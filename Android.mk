@@ -1,3 +1,5 @@
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),l35g)
-include $(call first-makefiles-under,$(call my-dir))
+LOCAL_PATH := $(call my-dir)
+
+ifneq ($(filter l35g,$(TARGET_DEVICE)),)
+include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
