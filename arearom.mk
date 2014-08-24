@@ -1,10 +1,10 @@
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/arearom/config/gsm.mk)
+$(call inherit-product, vendor/arearom/products/gsm.mk)
 
 TARGET_BOOTANIMATION_NAME := vertical-240x320
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/arearom/config/common_full_phone.mk)
+$(call inherit-product, vendor/arearom/products/common_full.mk)
 
 # Inherit device AOSP
 $(call inherit-product, device/lge/l35g/full_l35g.mk)
