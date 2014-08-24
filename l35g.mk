@@ -16,6 +16,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_AAPT_CONFIG := normal mdpi ldpi
 PRODUCT_AAPT_PREF_CONFIG := ldpi
 
+LOCAL_KERNEL := device/lge/l35g/kernel
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/recovery.fstab:recovery/root/etc/recovery.fstab
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.e0.rc:root/init.e0.rc \
     $(LOCAL_PATH)/ueventd.e0.rc:root/ueventd.e0.rc \
