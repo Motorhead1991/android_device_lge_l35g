@@ -12,7 +12,7 @@ on init
     mkdir /mnt/extra-sd 0000 system system
     symlink /mnt/sdcard /sdcard
 
-on emmc-fs
+on fs
 # mount mmc partitions
     wait /dev/block/mmcblk0p14
     mount ext4 /dev/block/mmcblk0p14 /system data=ordered,barrier=1
