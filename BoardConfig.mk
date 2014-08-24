@@ -18,6 +18,8 @@ TARGET_CPU_SMP := true
 TARGET_BOOTLOADER_BOARD_NAME := l35g
 TARGET_CORTEX_CACHE_LINE_32 := true
 
+BOARD_EGL_CFG := device/lge/l35g/egl.cfg
+
 BOARD_KERNEL_CMDLINE := androidboot.hardware=e0
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x01300000
@@ -34,7 +36,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_KERNEL_SOURCE := kernel/lge/l35g
 TARGET_KERNEL_CONFIG := arearom_l35g_defconfig
-#TARGET_PREBUILT_KERNEL := device/lge/l35g/kernel
+TARGET_PREBUILT_KERNEL := device/lge/l35g/kernel
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -65,7 +67,7 @@ BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := l35g
 # AMSS version to use for GPS
-#BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
+BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
 
 
 BOARD_WLAN_DEVICE := qcwcn
@@ -73,7 +75,7 @@ WIFI_EXT_MODULE_PATH := /system/lib/modules/librasdioif.ko
 WIFI_DRIVER_MODULE_PATH := /system/lib/modules/wlan.ko
 WIFI_EXT_MODULE_NAME := librasdioif
 WIFI_DRIVER_MODULE_NAME := wlan
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wext
+#BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wext
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 BOARD_WEXT_NO_COMBO_SCAN := true
@@ -86,6 +88,8 @@ BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun
 
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+
+TARGET_RECOVERY_FSTAB := device/lge/l35g/recovery/recovery.fstab
 
 # TWRP stuff
 DEVICE_RESOLUTION := 320x480
