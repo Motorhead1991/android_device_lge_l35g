@@ -1,2 +1,3 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/l35g.mk
+    $(LOCAL_DIR)/arearom.mk \
+    $(LOCAL_DIR)/full_l35g.mk
