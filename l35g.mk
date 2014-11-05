@@ -76,11 +76,10 @@ PRODUCT_COPY_FILES += \
 
 # HW HALS
 PRODUCT_PACKAGES += \
-    gralloc.msm7k \
+    gralloc.l35g \
     hwcomposer.msm7k \
     copybit.msm7k \
-    camera.l35g \
-    gps.l35g \
+    camera.msm7k \
     audio.a2dp.default \
     audio.primary.msm7k \
     audio_policy.msm7k \
@@ -92,4 +91,3 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libmm-omxcore \
     libOmxCore
-
